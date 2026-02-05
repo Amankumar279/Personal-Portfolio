@@ -1,0 +1,139 @@
+.contact-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 204, 255, 0.02) 50%, transparent 100%);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.contact-info h3 {
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+.contact-info p {
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.contact-link:hover {
+  border-color: var(--accent-primary);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Certifications */
+.certifications {
+  padding-top: 60px;
+  border-top: 1px solid var(--border-color);
+}
+
+.certifications-title {
+  font-size: clamp(28px, 3vw, 32px);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.cert-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all var(--transition-normal);
+}
+
+.cert-item:hover {
+  border-color: var(--accent-primary);
+  transform: translateX(5px);
+}
+
+.cert-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.cert-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cert-info p {
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 968px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-content {
+    margin-bottom: 60px;
+  }
+  
+  .contact-link {
+    padding: 18px;
+    font-size: 16px;
+  }
+  
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,109 @@
+.projects-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 136, 0.02) 50%, transparent 100%);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-glow {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-glow {
+  top: -50%;
+  left: -50%;
+}
+
+.project-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.project-title {
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.project-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.project-tech {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-bottom: 20px;
+}
+
+.project-description {
+  position: relative;
+  z-index: 1;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.project-description li {
+  margin-bottom: 10px;
+}
+
+.project-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: gap var(--transition-normal);
+}
+
+.project-link:hover {
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-card {
+    padding: 30px 20px;
+  }
+}
